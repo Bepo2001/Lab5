@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang="en">
+  <head> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add.css' %}">
+</head>
+
+  <body>
+    <div class="fa">
+        <h1>add new user:</h1>
+        <form action="{% url 'test:add' %}" method="post">
+          {% csrf_token %}
+          {{ form}}
+          <button type="submit">Submit</button>
+        </form>
+        <a href="{% url 'test:Default' %}">Go to home page</a>
+
+    </div>
+  </body>
+ <html>

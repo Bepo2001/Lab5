@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/defaultPath.css' %}">
+</head>
+
+<body>
+    
+        
+
+    <div class="my-list">
+        <h1>Wellcome to the home page</h1>
+        <p>you can see all the usernames down here!</p>
+        <ul>
+          {% for x in people %}
+            <li>{{x}}</li>
+          {% endfor %}
+        </ul>
+        <form action="">
+
+            <a href="{% url 'test:add' %}">Add a new user</a>
+    
+        </form>
+    </div>
+        
+    
+</body>
+</html>
